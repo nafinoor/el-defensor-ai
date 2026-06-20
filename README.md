@@ -1,4 +1,4 @@
-# El Defensor AI 🇦🇷
+# El Defensor AI
 
 An AI-powered Argentina football patriot. Talk trash about La Albiceleste at your own risk.
 
