@@ -1,0 +1,16 @@
+.streamlit/
+venv/
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
+.env
+*.log
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
