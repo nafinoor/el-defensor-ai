@@ -208,9 +208,15 @@ p, li, div, span, label {
     box-shadow: 0 2px 8px rgba(26, 54, 93, 0.04) !important;
 }
 
-[data-testid="stChatInput"]:focus {
-    border-color: var(--sky-blue) !important;
-    box-shadow: 0 0 0 2px rgba(117, 170, 219, 0.15) !important;
+[data-testid="stChatInput"]:focus-within {
+    border-color: var(--navy) !important;
+    box-shadow: 0 2px 8px rgba(26, 54, 93, 0.08) !important;
+    outline: none !important;
+}
+
+[data-testid="stChatInput"] input:focus {
+    outline: none !important;
+    box-shadow: none !important;
 }
 
 [data-testid="stChatInput"] input::placeholder {
@@ -308,6 +314,17 @@ p, li, div, span, label {
     [data-testid="stChatInput"]:focus {
         border-color: var(--sky-blue) !important;
         box-shadow: 0 0 0 2px rgba(117, 170, 219, 0.12) !important;
+    }
+
+    [data-testid="stChatInput"]:focus-within {
+        border-color: #4A7AB5 !important;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2) !important;
+        outline: none !important;
+    }
+
+    [data-testid="stChatInput"] input:focus {
+        outline: none !important;
+        box-shadow: none !important;
     }
 
     [data-testid="stChatInput"] input { color: #D0D0E0 !important; }
