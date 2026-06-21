@@ -367,6 +367,20 @@ p, li, div, span, label {
 
     .footer { padding: 1rem 0 0.3rem; }
     .footer p { font-size: 0.7rem; letter-spacing: 1px; }
+
+    [data-testid="stChatInput"] {
+        font-size: 0.85rem !important;
+        border-radius: 8px !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    [data-testid="stChatInput"] input {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: 0.85rem !important;
+    }
 }
 </style>
 """, unsafe_allow_html=True)
@@ -459,7 +473,7 @@ for message in st.session_state.messages:
 # ============================================================
 # 7. CHAT INPUT & STREAMING RESPONSE
 # ============================================================
-if user_prompt := st.chat_input("Try: 'Brazil is better than Argentina' or 'Messi is overrated'..."):
+if user_prompt := st.chat_input("Talk trash about La Albiceleste..."):
     with st.chat_message("user", avatar="🤬"):
         st.markdown(f"<div class='user-bubble'>{user_prompt}</div>", unsafe_allow_html=True)
     st.session_state.messages.append({"role": "user", "content": user_prompt})
