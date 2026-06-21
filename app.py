@@ -224,6 +224,13 @@ p, li, div, span, label {
     box-shadow: none !important;
 }
 
+[data-testid="stChatInput"] textarea:focus,
+[data-testid="stChatInput"] textarea:focus-visible {
+    outline: none !important;
+    box-shadow: none !important;
+    border-color: transparent !important;
+}
+            
 [data-testid="stChatInput"] input::placeholder {
     color: var(--text-light);
     font-style: italic;
@@ -325,6 +332,12 @@ p, li, div, span, label {
         border-color: #4A7AB5 !important;
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2) !important;
         outline: none !important;
+    }
+            
+    [data-testid="stChatInput"] textarea:focus,
+    [data-testid="stChatInput"] textarea:focus-visible {
+        outline: none !important;
+        box-shadow: none !important;
     }
 
     [data-testid="stChatInput"] *:focus,
