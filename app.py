@@ -64,6 +64,10 @@ st.markdown("""
 
 #MainMenu, .stDeployButton, header { display: none; }
 
+*:focus-visible {
+    outline: none !important;
+}
+
 .main > .block-container {
     max-width: 780px;
     padding: 0.5rem 1.5rem 2rem;
@@ -214,7 +218,8 @@ p, li, div, span, label {
     outline: none !important;
 }
 
-[data-testid="stChatInput"] input:focus {
+[data-testid="stChatInput"] *:focus,
+[data-testid="stChatInput"] *:focus-visible {
     outline: none !important;
     box-shadow: none !important;
 }
@@ -322,7 +327,8 @@ p, li, div, span, label {
         outline: none !important;
     }
 
-    [data-testid="stChatInput"] input:focus {
+    [data-testid="stChatInput"] *:focus,
+    [data-testid="stChatInput"] *:focus-visible {
         outline: none !important;
         box-shadow: none !important;
     }
