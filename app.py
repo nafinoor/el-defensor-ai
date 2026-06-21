@@ -23,7 +23,7 @@ def md_to_html(text):
 # 1. PAGE CONFIG
 # ============================================================
 st.set_page_config(
-    page_title="El Defensor AI — La Albiceleste",
+    page_title="El Defensor AI • La Albiceleste",
     page_icon="🇦🇷",
     layout="centered",
 )
