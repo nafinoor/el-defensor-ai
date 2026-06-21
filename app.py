@@ -268,6 +268,106 @@ p, li, div, span, label {
     border-color: var(--sky-blue) !important;
     border-top-color: transparent !important;
 }
+
+/* ── Dark mode ── */
+@media (prefers-color-scheme: dark) {
+    .stApp {
+        background-color: #141424;
+        background-image: repeating-linear-gradient(
+            90deg,
+            transparent,
+            transparent 45px,
+            rgba(117, 170, 219, 0.08) 45px,
+            rgba(117, 170, 219, 0.08) 75px
+        );
+    }
+
+    .header-hero h1 { color: #B8D8F0; }
+    .header-hero .subtitle { color: #8A9BB0; }
+
+    .assistant-bubble {
+        background: #1C1C30;
+        color: #D0D0E0 !important;
+        border-color: rgba(117, 170, 219, 0.15);
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .assistant-bubble p { color: #D0D0E0; }
+
+    .user-bubble {
+        background: linear-gradient(135deg, #1A365D 0%, #2C4F7C 100%);
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    [data-testid="stChatInput"] {
+        background: #1C1C30 !important;
+        border-color: rgba(117, 170, 219, 0.2) !important;
+        color: #D0D0E0 !important;
+    }
+
+    [data-testid="stChatInput"]:focus {
+        border-color: var(--sky-blue) !important;
+        box-shadow: 0 0 0 2px rgba(117, 170, 219, 0.12) !important;
+    }
+
+    [data-testid="stChatInput"] input { color: #D0D0E0 !important; }
+    [data-testid="stChatInput"] input::placeholder { color: #6A7B8C; }
+
+    .footer p { color: #6A7B8C; }
+    .footer .stripe { background: linear-gradient(90deg, transparent, rgba(117, 170, 219, 0.3), transparent); }
+
+    ::-webkit-scrollbar-track { background: #141424; }
+    ::-webkit-scrollbar-thumb { background: #2C4F7C; }
+}
+
+/* ── Mobile responsive ── */
+@media (max-width: 640px) {
+    .main > .block-container {
+        padding: 0.3rem 0.6rem 1.5rem;
+    }
+
+    .header-hero { padding: 1rem 0.5rem 0.3rem; }
+
+    .header-hero .sun svg,
+    .header-hero .sun {
+        width: 26px !important;
+        height: 26px !important;
+    }
+
+    .header-hero .crest svg,
+    .header-hero .crest {
+        width: 56px !important;
+        height: 37px !important;
+    }
+
+    .header-hero h1 {
+        font-size: 1.8rem;
+        letter-spacing: 2px;
+    }
+
+    .header-hero .subtitle { font-size: 0.85rem; }
+
+    [data-testid="stChatMessage"] { padding: 0.15rem 0 !important; }
+    [data-testid="stChatMessage"] [data-testid="stChatMessageAvatar"] {
+        font-size: 1.3rem !important;
+        padding-top: 0.2rem !important;
+    }
+
+    .user-bubble {
+        margin-left: 0.5rem;
+        padding: 0.6rem 0.8rem;
+        font-size: 0.85rem;
+    }
+
+    .assistant-bubble {
+        margin-right: 0.5rem;
+        padding: 0.6rem 0.8rem;
+        font-size: 0.85rem;
+    }
+
+    .footer { padding: 1rem 0 0.3rem; }
+    .footer p { font-size: 0.7rem; letter-spacing: 1px; }
+}
 </style>
 """, unsafe_allow_html=True)
 
